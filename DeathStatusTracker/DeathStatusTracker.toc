@@ -1,0 +1,10 @@
+## Interface: 100107
+## Title: Death Status Tracker
+## Notes: Tracks and displays player deaths in groups
+## SavedVariables: DeathStatusTrackerDB
+## DefaultState: enabled
+## LoadOnDemand: 0
+## Version: 1.0
+
+DeathStatusTracker.lua
+Config.lua
