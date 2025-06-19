@@ -45,6 +45,18 @@ backdropFrame:SetBackdrop({
 backdropFrame:SetBackdropColor(0.05, 0.05, 0.07, 0.6) -- Lighter dark blue with less opacity
 backdropFrame:SetBackdropBorderColor(0.4, 0.4, 0.5, 0.8) -- Lighter border color
 
+-- For newer API (Shadowlands+)
+local backdrop = {
+  backgroundFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
+  backgroundInsets = { left = 11, right = 12, top = 12, bottom = 11 },
+  backgroundColor = CreateColor(0, 0, 0, 0.3), -- More transparent background (0.3 alpha)
+  borderFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+  borderColor = CreateColor(1, 1, 1, 0.5),
+  borderSize = 32,
+}
+
+frame:SetBackdrop(backdrop)
+
 -- Add header text with explicit bright coloring
 local headerText = frame:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
 headerText:SetPoint("TOPLEFT", 10, -10)
